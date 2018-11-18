@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+var params = {
+  keyid: "取得アクセスキー",
+  name:'探したい店名'
+}
+
+$.getJSON( url, params, function( result ) {
+  console.log( result )
+})
+</script>	
+</body>
+</html>

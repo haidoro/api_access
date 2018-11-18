@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+<script>
+let params = new FormData();
+params.append("apikey","取得アクセスキー");
+params.append("query","おはよう" );
+axios.post('https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk',params)
+  .then(response =>{
+     console.log(response.data.results[0].reply);
+  }).catch(error => {
+     console.log(error);
+});
+</script>	
+</body>
+</html>

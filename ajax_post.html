@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+$.ajax({
+  url: "https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk",
+  type: 'POST',
+  data: { apikey: '取得アクセスキー', query: 'おはよう' }
+  }).then(data　=> {
+    console.log(data.results[0]['reply']),
+    error => alert('エラー')
+})
+</script>	
+</body>
+</html>

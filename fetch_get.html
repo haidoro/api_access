@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+fetch('https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=[取得アクセスキー]&name=[探したい店名]')
+.then(response => {
+  response.json().then(data => {
+    console.log(data.rest);
+  })
+}).catch(error => console.log(error));
+</script>	
+</body>
+</html>
